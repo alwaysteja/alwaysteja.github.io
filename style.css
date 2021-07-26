@@ -1,0 +1,18 @@
+
+body{
+    background-image: url('stage-design.jpg');
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-image: radial-gradient(rgb);
+    
+}
+#hi,#teja{
+text-align: center;
+color: rgb(19, 18, 18);
+font-size: 100px;
+font-variant: normal;
+color: white;
+background-color:teal;
+padding-bottom: 12px;
+float: inline-start;
+}

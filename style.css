@@ -22,12 +22,13 @@ background-color:black;
     text-align:center;
     font-size: 80px;
     display: block;
-margin: auto;
-width: 60%;
+    margin: auto;
+    width: 60%;
     color: black;
     background-color:teal;
    
     }
+<<<<<<< HEAD
 .box{
     background-color: rgb(230, 225, 225);
     width: 100%;
@@ -53,3 +54,5 @@ a{
     background-color: black;
     
 }
+=======
+>>>>>>> 6e8eb0b6b211ae1e298e42e1b0782e305c8a9bda

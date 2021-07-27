@@ -46,10 +46,15 @@ img {
 a{
     text-transform: uppercase;
     font-size: 20px;
-    color: green;
-    margin-left: 70%;
+    color: black;
+    margin-left: 15%;
+    position: relative;
+    top: 150px;
    width: fit-content;
-    text-decoration-color: black;
-    background-color: black;
+   border: 2px solid black;
+    
+    background-color: green;
     
 }
+
+

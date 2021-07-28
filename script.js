@@ -1,5 +1,5 @@
 function hi(){
-    document.getElementById("hi").innerHTML="Hi I' Am";
+    document.getElementById("hi").innerHTML="Hi! I' Am";
     document.getElementById("teja").innerHTML="Teja Nutakki";
 
 }
@@ -22,8 +22,9 @@ function Greet(){
     } else {  
       welcome = "Good Evening";  
     }  
+    document.getElementById("teja").innerHTML="Welcome";
  document.getElementById("hi").innerHTML=welcome;
- document.getElementById("teja").innerHTML="Welcome to My page";
+
 
 
 }

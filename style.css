@@ -1,130 +1,132 @@
-
-body{
-    background-image: url('stage-design.jpg');
-    background-repeat: no-repeat;
-    background-position:center;
-    background-image: radial-gradient(rgb);
+        body{
+            background-image: url('stage-design.jpg');
+            background-repeat: no-repeat;
+            background-position:center;
+            background-image: radial-gradient(rgb);
+            
+        }
+        #hi{
+        border: 5px solid black;
+        text-align: center;
+        font-size: 80px;
+        display: block;
+        margin: auto;
+        width: 50%;
+        color: white;
+        background-color:black;
+        
+        }
+        #teja{
+            border: 5px solid black;
+            text-align:center;
+            font-size: 80px;
+            display: block;
+            margin: auto;
+            width: 60%;
+            color: black;
+            background-color:teal;
+           
+            }
+        .box{
+            background-color: rgb(230, 225, 225);
+            width: 100%;
+            height: auto;
+        }
+        
+        img {
+            max-width: 300px;
+            height: 300px;
+           
+            position: relative;
+            bottom: 200px;
+            left: 120px;
+           
+           border: 10px solid white;
+        }
+        
+        #per{
+            color:  teal;
+            position: relative;
+            margin-left: 38%;
+            top: 30px;
+            text-transform: uppercase;
+        }
+        .details{
+            font-size: 20px;
+            color:  black;
+            position: relative;
+            margin-left: 20%;
+            top: 60px;
+            line-height: 20px;
+            text-align: start;
+            
+        }
+        .details p{
+            border-bottom :5px solid white;
+            display: block;
+            margin: auto;
+            width: 50%;
+            line-height: 30px;
+            
+        }
+        .fa-linkedin {
+            background: #007bb5;
+            color: white;
+          }
+          .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 30px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 50%;
+          }
+          
+          .fa:hover {
+              background-color: green;
+          }
+          .fa-instagram {
+            background: purple;
+            color: white;
+            border-radius: 50%;
+          }
+          .fa-twitter {
+            background: #55ACEE;
+            color: white;
+            border-radius: 50%;
+          }
+          .fa-facebook {
+            background: #3B5998;
+            color: white;
+            border-radius: 50%;
+          }
+          .fa-github{
+            background: black;
+            color: white;
+            border-radius: 50%;
+          }
+          
+          .social{
+            position: relative;
+            margin-left: 38%;
+            top: 400px;
+          }
+          #resume{
+              font-size: 20px;
+              color: white;
+              background-color: black;
+              padding: 5px;
+              position: relative;
+              left: 190px;
+              top: 470px;
+              border:solid 2px springgreen;
+          }
+          #resume:hover {
+            color: black;
+            background-color:forestgreen ;
+        }
+        
+      
     
-}
-#hi{
-border: 5px solid black;
-text-align: center;
-font-size: 80px;
-display: block;
-margin: auto;
-width: 50%;
-color: white;
-background-color:black;
-
-}
-#teja{
-    border: 5px solid black;
-    text-align:center;
-    font-size: 80px;
-    display: block;
-    margin: auto;
-    width: 60%;
-    color: black;
-    background-color:teal;
-   
-    }
-.box{
-    background-color: rgb(230, 225, 225);
-    width: 100%;
-    height: auto;
-}
-
-img {
-    max-width: 300px;
-    height: 300px;
-   
-    position: relative;
-    bottom: 200px;
-    left: 120px;
-   
-   border: 10px solid white;
-}
-
-#per{
-    color:  teal;
-    position: relative;
-    margin-left: 38%;
-    top: 30px;
-    text-transform: uppercase;
-}
-.details{
-    font-size: 20px;
-    color:  black;
-    position: relative;
-    margin-left: 20%;
-    top: 60px;
-    line-height: 20px;
-    text-align: start;
     
-}
-.details p{
-    border-bottom :5px solid white;
-    display: block;
-    margin: auto;
-    width: 50%;
-    line-height: 30px;
-    
-}
-.fa-linkedin {
-    background: #007bb5;
-    color: white;
-  }
-  .fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 30px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-    border-radius: 50%;
-  }
-  
-  .fa:hover {
-      background-color: green;
-  }
-  .fa-instagram {
-    background: purple;
-    color: white;
-    border-radius: 50%;
-  }
-  .fa-twitter {
-    background: #55ACEE;
-    color: white;
-    border-radius: 50%;
-  }
-  .fa-facebook {
-    background: #3B5998;
-    color: white;
-    border-radius: 50%;
-  }
-  .fa-github{
-    background: black;
-    color: white;
-    border-radius: 50%;
-  }
-  
-  .social{
-    position: relative;
-    margin-left: 38%;
-    top: 400px;
-  }
-  #resume{
-      font-size: 20px;
-      color: white;
-      background-color: black;
-      padding: 5px;
-      position: relative;
-      left: 190px;
-      top: 470px;
-      border:solid 2px springgreen;
-  }
-  #resume:hover {
-    color: black;
-    background-color:forestgreen ;
-}
-

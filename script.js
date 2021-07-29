@@ -28,3 +28,14 @@ function Greet(){
 
 
 }
+var n=0;
+function countleave(){
+  n=count()-1;
+
+}
+function count(){
+  n=n+1;
+  document.getElementById("count").innerHTML=n;
+
+  return n;
+}

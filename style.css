@@ -126,7 +126,12 @@
             color: black;
             background-color:forestgreen ;
         }
-        
+.footer{
+  color: white;
+  float: inline-end;
+  text-align: center;
+  background-color: orange;
+}
       
     
     

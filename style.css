@@ -16,6 +16,9 @@
         background-color:black;
         
         }
+         #dob{
+                    color: black;
+                    }
         #teja{
             border: 5px solid black;
             text-align:center;
@@ -130,7 +133,7 @@
   color: white;
   float: inline-end;
   text-align: center;
-  background-color: orange;
+  background-color: gradient;
 }
       
     

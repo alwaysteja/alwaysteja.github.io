@@ -1,7 +1,427 @@
 /* ================================================
    TEJA NUTAKKI — PORTFOLIO
    Premium Dark Theme with Glassmorphism
+   + Interactive Effects & Micro-Animations
    ================================================ */
+
+/* ---------- Loading Screen ---------- */
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: #060a14;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loader-terminal {
+  width: 520px;
+  max-width: 90vw;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+}
+
+.loader-terminal-header {
+  background: rgba(30, 35, 50, 0.9);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.terminal-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.terminal-dot.red {
+  background: #ff5f57;
+}
+
+.terminal-dot.yellow {
+  background: #ffbd2e;
+}
+
+.terminal-dot.green {
+  background: #28ca41;
+}
+
+.terminal-title,
+.terminal-title-bar {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: #64748b;
+  margin-left: 8px;
+}
+
+.loader-terminal-body {
+  background: rgba(10, 14, 26, 0.95);
+  padding: 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  line-height: 1.8;
+  min-height: 200px;
+  color: #94a3b8;
+}
+
+.loader-line {
+  opacity: 0;
+  animation: fadeInLine 0.3s forwards;
+}
+
+.loader-line .cmd {
+  color: #06ffa5;
+}
+
+.loader-line .path {
+  color: #00d4ff;
+}
+
+.loader-line .success {
+  color: #28ca41;
+}
+
+.loader-line .warn {
+  color: #ffbd2e;
+}
+
+@keyframes fadeInLine {
+  to {
+    opacity: 1;
+  }
+}
+
+.loader-progress {
+  width: 520px;
+  max-width: 90vw;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 2px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.loader-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #00d4ff, #7c3aed, #06ffa5);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+/* ---------- Custom Cursor ---------- */
+.custom-cursor {
+  width: 8px;
+  height: 8px;
+  background: #00d4ff;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 99998;
+  transition: transform 0.1s ease, opacity 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.5), 0 0 20px rgba(0, 212, 255, 0.3);
+  mix-blend-mode: screen;
+}
+
+.custom-cursor-outline {
+  width: 36px;
+  height: 36px;
+  border: 2px solid rgba(0, 212, 255, 0.3);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 99997;
+  transition: transform 0.15s ease, width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
+}
+
+.custom-cursor.hover {
+  transform: scale(2.5);
+  background: rgba(0, 212, 255, 0.3);
+}
+
+.custom-cursor-outline.hover {
+  width: 56px;
+  height: 56px;
+  border-color: rgba(124, 58, 237, 0.4);
+}
+
+.custom-cursor.click {
+  transform: scale(0.5);
+}
+
+@media (max-width: 768px) {
+
+  .custom-cursor,
+  .custom-cursor-outline {
+    display: none !important;
+  }
+}
+
+/* ---------- Scroll Progress ---------- */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #00d4ff, #7c3aed, #06ffa5);
+  z-index: 10001;
+  transition: width 0.05s linear;
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.4);
+}
+
+/* ---------- Gradient Animated Text ---------- */
+.gradient-text {
+  background: linear-gradient(90deg, #00d4ff, #7c3aed, #06ffa5, #00d4ff);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 4s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ---------- 3D Tilt Card Effect ---------- */
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease;
+}
+
+.tilt-card .tilt-shine {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: radial-gradient(circle at var(--tilt-x, 50%) var(--tilt-y, 50%), rgba(255, 255, 255, 0.08), transparent 60%);
+}
+
+.tilt-card:hover .tilt-shine {
+  opacity: 1;
+}
+
+/* ---------- Magnetic Button ---------- */
+.magnetic {
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* ---------- Text Scramble ---------- */
+.scramble-text {
+  display: inline-block;
+}
+
+.scramble-text .char {
+  display: inline-block;
+  transition: none;
+}
+
+.scramble-text .char.scrambling {
+  color: #00d4ff;
+}
+
+/* ---------- Terminal Easter Egg ---------- */
+.terminal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99990;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+}
+
+.terminal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.terminal-window {
+  width: 660px;
+  max-width: 95vw;
+  max-height: 80vh;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
+  transform: scale(0.9) translateY(20px);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+}
+
+.terminal-overlay.active .terminal-window {
+  transform: scale(1) translateY(0);
+}
+
+.terminal-header {
+  background: rgba(30, 35, 50, 0.95);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.terminal-close {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: #64748b;
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+  transition: color 0.2s;
+}
+
+.terminal-close:hover {
+  color: #ff5f57;
+}
+
+.terminal-body {
+  background: rgba(10, 14, 26, 0.98);
+  padding: 16px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: #94a3b8;
+  overflow-y: auto;
+  flex: 1;
+  min-height: 300px;
+  max-height: 50vh;
+}
+
+.terminal-welcome .ascii-art {
+  font-size: 0.55rem;
+  line-height: 1.2;
+  color: #00d4ff;
+  margin-bottom: 12px;
+}
+
+.cmd-highlight {
+  color: #06ffa5;
+  font-weight: 700;
+}
+
+.terminal-output-line {
+  margin-bottom: 4px;
+}
+
+.terminal-output-line .cmd {
+  color: #06ffa5;
+}
+
+.terminal-output-line .info {
+  color: #00d4ff;
+}
+
+.terminal-output-line .warn {
+  color: #ffbd2e;
+}
+
+.terminal-input-line {
+  background: rgba(10, 14, 26, 0.98);
+  padding: 8px 16px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.terminal-prompt {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  color: #06ffa5;
+  white-space: nowrap;
+}
+
+.terminal-input {
+  flex: 1;
+  background: none;
+  border: none;
+  color: #e2e8f0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  outline: none;
+  caret-color: #00d4ff;
+}
+
+/* ---------- Footer Easter Egg Hint ---------- */
+.footer-easter-egg {
+  margin-top: 12px;
+  font-size: 0.75rem;
+  color: #475569;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.footer-easter-egg:hover {
+  opacity: 1;
+}
+
+.footer-easter-egg kbd {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+}
+
+/* ---------- Enhanced Reveals ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Skill tags pop in */
+.skill-tag {
+  transition: transform var(--transition-spring), box-shadow var(--transition-base), background var(--transition-base), opacity 0.5s ease;
+}
+
+.reveal:not(.visible) .skill-tag {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.reveal.visible .skill-tag {
+  opacity: 1;
+  transform: scale(1);
+}
 
 /* ---------- CSS Custom Properties ---------- */
 :root {

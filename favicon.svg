@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e1a"/>
+      <stop offset="100%" style="stop-color:#1a1040"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4ff"/>
+      <stop offset="50%" style="stop-color:#7c3aed"/>
+      <stop offset="100%" style="stop-color:#06ffa5"/>
+    </linearGradient>
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4ff"/>
+      <stop offset="100%" style="stop-color:#06ffa5"/>
+    </linearGradient>
+  </defs>
+  <!-- Background rounded square -->
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <!-- Subtle border glow -->
+  <rect width="62" height="62" x="1" y="1" rx="13" fill="none" stroke="url(#accent)" stroke-width="1.5" opacity="0.4"/>
+  <!-- Brackets < /> -->
+  <text x="6" y="42" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="16" font-weight="700" fill="url(#accent)" opacity="0.7">&lt;</text>
+  <text x="42" y="42" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="14" font-weight="700" fill="url(#accent)" opacity="0.7">/&gt;</text>
+  <!-- TN Letters -->
+  <text x="32" y="43" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="24" font-weight="800" fill="url(#text-grad)" text-anchor="middle" letter-spacing="-1">TN</text>
+  <!-- Top accent dot -->
+  <circle cx="32" cy="12" r="2.5" fill="#00d4ff" opacity="0.8"/>
+</svg>

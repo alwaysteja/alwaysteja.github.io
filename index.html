@@ -10,7 +10,7 @@
         content="Teja Nutakki, Senior Software Engineer, Gainsight, Java Developer, Spring Boot, Full Stack Developer, Portfolio">
     <meta name="author" content="Teja Nutakki">
     <title>Teja Nutakki — Senior Software Engineer</title>
-    <link rel="icon" href="Images/batman-8510022_1280.png">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -21,6 +21,30 @@
 </head>
 
 <body>
+
+    <!-- Loading Screen -->
+    <div id="loader" class="loader">
+        <div class="loader-terminal">
+            <div class="loader-terminal-header">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+                <span class="terminal-title">teja@portfolio ~ %</span>
+            </div>
+            <div class="loader-terminal-body" id="loader-lines">
+            </div>
+        </div>
+        <div class="loader-progress">
+            <div class="loader-progress-bar" id="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="cursor-dot"></div>
+    <div class="custom-cursor-outline" id="cursor-outline"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scroll-progress"></div>
 
     <!-- Particle Canvas Background -->
     <canvas id="particle-canvas"></canvas>
@@ -40,7 +64,7 @@
                 <a href="#education" class="nav-link">Education</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
-            <a href="Teja_Nutakki_SWE.pdf" target="_blank" class="nav-resume-btn" id="nav-resume-btn">
+            <a href="Teja_Nutakki_SWE.pdf" target="_blank" class="nav-resume-btn magnetic" id="nav-resume-btn">
                 <i class="fas fa-download"></i> Resume
             </a>
             <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
@@ -57,8 +81,8 @@
             <div class="hero-text">
                 <p class="hero-greeting" id="hero-greeting">Hello, I'm</p>
                 <h1 class="hero-name">
-                    <span class="name-first">Teja</span>
-                    <span class="name-last">Nutakki</span>
+                    <span class="name-first gradient-text" data-text="Teja">Teja</span>
+                    <span class="name-last gradient-text" data-text="Nutakki">Nutakki</span>
                 </h1>
                 <div class="hero-title-wrapper">
                     <span class="hero-title-prefix">I'm a</span>
@@ -71,11 +95,11 @@
                     solutions and optimizing data pipelines.
                 </p>
                 <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">
+                    <a href="#projects" class="btn btn-primary magnetic">
                         <span>View My Work</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
-                    <a href="#contact" class="btn btn-outline">
+                    <a href="#contact" class="btn btn-outline magnetic">
                         <span>Let's Connect</span>
                         <i class="fas fa-paper-plane"></i>
                     </a>
@@ -103,16 +127,16 @@
                     <div class="hero-image-ring ring-2"></div>
                     <img src="Images/Teja2024.jpg" alt="Teja Nutakki" class="hero-image">
                 </div>
-                <div class="floating-badge badge-1">
+                <div class="floating-badge badge-1" data-speed="2">
                     <i class="fab fa-java"></i>
                 </div>
-                <div class="floating-badge badge-2">
+                <div class="floating-badge badge-2" data-speed="3">
                     <i class="fas fa-leaf"></i>
                 </div>
-                <div class="floating-badge badge-3">
+                <div class="floating-badge badge-3" data-speed="1.5">
                     <i class="fas fa-database"></i>
                 </div>
-                <div class="floating-badge badge-4">
+                <div class="floating-badge badge-4" data-speed="2.5">
                     <i class="fas fa-rocket"></i>
                 </div>
             </div>
@@ -130,12 +154,12 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">&lt;about&gt;</span>
-                <h2 class="section-title">About Me</h2>
+                <h2 class="section-title scramble-text">About Me</h2>
                 <div class="section-line"></div>
             </div>
             <div class="about-grid">
                 <div class="about-image-col">
-                    <div class="about-image-card">
+                    <div class="about-image-card tilt-card">
                         <img src="Images/Teja2024.jpg" alt="Teja Nutakki" class="about-photo">
                         <div class="about-image-overlay"></div>
                     </div>
@@ -146,8 +170,7 @@
                         I'm a Senior Software Engineer at <strong>Gainsight Pvt Limited</strong>, where I've been
                         driving backend engineering excellence since August 2021. I specialize in building scalable,
                         high-performance systems using Java and Spring Boot, with deep expertise in database
-                        optimization,
-                        caching strategies, and data pipeline engineering.
+                        optimization, caching strategies, and data pipeline engineering.
                     </p>
                     <p class="about-description">
                         My key achievements include improving CDC worker efficiency by 200% through MD5 hashing
@@ -185,7 +208,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="Teja_Nutakki_SWE.pdf" target="_blank" class="btn btn-primary about-btn">
+                    <a href="Teja_Nutakki_SWE.pdf" target="_blank" class="btn btn-primary about-btn magnetic">
                         <i class="fas fa-download"></i>
                         <span>Download Resume</span>
                     </a>
@@ -199,11 +222,11 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">&lt;skills&gt;</span>
-                <h2 class="section-title">Tech Stack</h2>
+                <h2 class="section-title scramble-text">Tech Stack</h2>
                 <div class="section-line"></div>
             </div>
             <div class="skills-categories">
-                <div class="skill-category">
+                <div class="skill-category tilt-card">
                     <div class="skill-category-header">
                         <i class="fas fa-code"></i>
                         <h3>Languages</h3>
@@ -216,7 +239,7 @@
                         <span class="skill-tag">JavaScript</span>
                     </div>
                 </div>
-                <div class="skill-category">
+                <div class="skill-category tilt-card">
                     <div class="skill-category-header">
                         <i class="fas fa-layer-group"></i>
                         <h3>Frameworks</h3>
@@ -230,7 +253,7 @@
                         <span class="skill-tag">JSP</span>
                     </div>
                 </div>
-                <div class="skill-category">
+                <div class="skill-category tilt-card">
                     <div class="skill-category-header">
                         <i class="fas fa-database"></i>
                         <h3>Databases</h3>
@@ -242,7 +265,7 @@
                         <span class="skill-tag">Amazon Redshift</span>
                     </div>
                 </div>
-                <div class="skill-category">
+                <div class="skill-category tilt-card">
                     <div class="skill-category-header">
                         <i class="fas fa-network-wired"></i>
                         <h3>Message Brokers & Caching</h3>
@@ -252,7 +275,7 @@
                         <span class="skill-tag">Redis</span>
                     </div>
                 </div>
-                <div class="skill-category">
+                <div class="skill-category tilt-card">
                     <div class="skill-category-header">
                         <i class="fas fa-vial"></i>
                         <h3>Testing & QA</h3>
@@ -264,7 +287,7 @@
                         <span class="skill-tag">API Automation</span>
                     </div>
                 </div>
-                <div class="skill-category">
+                <div class="skill-category tilt-card">
                     <div class="skill-category-header">
                         <i class="fas fa-tools"></i>
                         <h3>Tools & Platforms</h3>
@@ -280,7 +303,7 @@
                         <span class="skill-tag">Salesforce</span>
                     </div>
                 </div>
-                <div class="skill-category">
+                <div class="skill-category tilt-card">
                     <div class="skill-category-header">
                         <i class="fas fa-brain"></i>
                         <h3>Core Competencies</h3>
@@ -301,7 +324,7 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">&lt;experience&gt;</span>
-                <h2 class="section-title">Career Journey</h2>
+                <h2 class="section-title scramble-text">Career Journey</h2>
                 <div class="section-line"></div>
             </div>
             <div class="timeline">
@@ -309,11 +332,12 @@
                     <div class="timeline-marker">
                         <div class="timeline-dot"></div>
                     </div>
-                    <div class="timeline-content glass-card">
+                    <div class="timeline-content glass-card tilt-card">
                         <div class="timeline-badge current">Current</div>
                         <h3 class="timeline-title">Senior Software Engineer</h3>
                         <p class="timeline-company"><i class="fas fa-building"></i> Gainsight Pvt Limited</p>
-                        <p class="timeline-period"><i class="far fa-calendar-alt"></i> Aug 2022 – Present (3+ years)</p>
+                        <p class="timeline-period"><i class="far fa-calendar-alt"></i> Aug 2022 – Present (3+ years)
+                        </p>
                         <ul class="timeline-details">
                             <li><strong>Improved CDC Worker Efficiency by 200%:</strong> Implemented MD5 hashing on data
                                 ingestion, preventing unnecessary data syncing from PostgreSQL to Redshift</li>
@@ -333,14 +357,15 @@
                     <div class="timeline-marker">
                         <div class="timeline-dot"></div>
                     </div>
-                    <div class="timeline-content glass-card">
+                    <div class="timeline-content glass-card tilt-card">
                         <h3 class="timeline-title">Software Engineer</h3>
                         <p class="timeline-company"><i class="fas fa-building"></i> Gainsight Pvt Limited</p>
                         <p class="timeline-period"><i class="far fa-calendar-alt"></i> Feb 2022 – Aug 2022</p>
                         <ul class="timeline-details">
                             <li>Leveraged Java for building robust and scalable software solutions</li>
                             <li>Developed applications using the Spring Boot framework with in-depth practical
-                                experience</li>
+                                experience
+                            </li>
                             <li>Managed NoSQL (MongoDB) and relational (PostgreSQL, MySQL) databases for efficient data
                                 storage</li>
                             <li>Applied SDLC and Agile methodologies for efficient collaborative development</li>
@@ -357,7 +382,7 @@
                     <div class="timeline-marker">
                         <div class="timeline-dot"></div>
                     </div>
-                    <div class="timeline-content glass-card">
+                    <div class="timeline-content glass-card tilt-card">
                         <h3 class="timeline-title">Associate SDET</h3>
                         <p class="timeline-company"><i class="fas fa-building"></i> Gainsight Pvt Limited</p>
                         <p class="timeline-period"><i class="far fa-calendar-alt"></i> Aug 2021 – Feb 2022</p>
@@ -382,11 +407,11 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">&lt;projects&gt;</span>
-                <h2 class="section-title">Featured Projects</h2>
+                <h2 class="section-title scramble-text">Featured Projects</h2>
                 <div class="section-line"></div>
             </div>
             <div class="projects-grid">
-                <div class="project-card glass-card">
+                <div class="project-card glass-card tilt-card">
                     <div class="project-icon">
                         <i class="fas fa-robot"></i>
                     </div>
@@ -403,14 +428,15 @@
                         <i class="fas fa-building"></i> Gainsight Pvt Limited
                     </div>
                 </div>
-                <div class="project-card glass-card">
+                <div class="project-card glass-card tilt-card">
                     <div class="project-icon">
                         <i class="fas fa-utensils"></i>
                     </div>
                     <h3 class="project-title">Campus Eats — Food Delivery System</h3>
                     <p class="project-desc">Developed and maintained the backend database connection using JDBC and
-                        MySQL for an efficient food delivery system within the college campus. Built with JSP for the
-                        frontend layer.</p>
+                        MySQL
+                        for an efficient food delivery system within the college campus. Built with JSP for the frontend
+                        layer.</p>
                     <div class="project-tech">
                         <span>JSP</span><span>JDBC</span><span>Java</span><span>MySQL</span><span>HTML</span><span>CSS</span>
                     </div>
@@ -418,7 +444,7 @@
                         <i class="fas fa-graduation-cap"></i> College Project
                     </div>
                 </div>
-                <div class="project-card glass-card">
+                <div class="project-card glass-card tilt-card">
                     <div class="project-icon">
                         <i class="fas fa-briefcase"></i>
                     </div>
@@ -437,7 +463,7 @@
                 </div>
             </div>
             <div class="projects-cta">
-                <a href="https://github.com/alwaysteja" target="_blank" class="btn btn-outline">
+                <a href="https://github.com/alwaysteja" target="_blank" class="btn btn-outline magnetic">
                     <span>View All Projects on GitHub</span>
                     <i class="fab fa-github"></i>
                 </a>
@@ -450,18 +476,18 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">&lt;education&gt;</span>
-                <h2 class="section-title">Education</h2>
+                <h2 class="section-title scramble-text">Education</h2>
                 <div class="section-line"></div>
             </div>
-            <div class="education-card glass-card">
+            <div class="education-card glass-card tilt-card">
                 <div class="education-icon">
                     <i class="fas fa-graduation-cap"></i>
                 </div>
                 <div class="education-details">
                     <h3 class="education-degree">Bachelor of Technology (B.Tech)</h3>
                     <p class="education-field">Computer Science Engineering</p>
-                    <p class="education-university"><i class="fas fa-university"></i> Andhra University, Visakhapatnam
-                    </p>
+                    <p class="education-university"><i class="fas fa-university"></i> Andhra University,
+                        Visakhapatnam</p>
                     <p class="education-year"><i class="far fa-calendar-alt"></i> Graduated July 2021</p>
                 </div>
             </div>
@@ -473,22 +499,22 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">&lt;profiles&gt;</span>
-                <h2 class="section-title">Coding Profiles</h2>
+                <h2 class="section-title scramble-text">Coding Profiles</h2>
                 <div class="section-line"></div>
             </div>
             <div class="profiles-grid">
-                <a href="https://github.com/alwaysteja" target="_blank" class="profile-card glass-card">
+                <a href="https://github.com/alwaysteja" target="_blank" class="profile-card glass-card tilt-card">
                     <i class="fab fa-github"></i>
                     <span>GitHub</span>
                     <small>@alwaysteja</small>
                 </a>
-                <a href="https://www.hackerrank.com/" target="_blank" class="profile-card glass-card">
+                <a href="https://www.hackerrank.com/" target="_blank" class="profile-card glass-card tilt-card">
                     <i class="fab fa-hackerrank"></i>
                     <span>HackerRank</span>
                     <small>Problem Solving</small>
                 </a>
                 <a href="https://www.linkedin.com/in/teja-nutakki-485208a2/" target="_blank"
-                    class="profile-card glass-card">
+                    class="profile-card glass-card tilt-card">
                     <i class="fab fa-linkedin-in"></i>
                     <span>LinkedIn</span>
                     <small>Professional Network</small>
@@ -502,7 +528,7 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">&lt;contact&gt;</span>
-                <h2 class="section-title">Let's Connect</h2>
+                <h2 class="section-title scramble-text">Let's Connect</h2>
                 <div class="section-line"></div>
             </div>
             <div class="contact-grid">
@@ -543,22 +569,23 @@
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="https://github.com/alwaysteja" target="_blank" class="social-link" aria-label="GitHub">
+                        <a href="https://github.com/alwaysteja" target="_blank" class="social-link magnetic"
+                            aria-label="GitHub">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/teja-nutakki-485208a2/" target="_blank" class="social-link"
-                            aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/teja-nutakki-485208a2/" target="_blank"
+                            class="social-link magnetic" aria-label="LinkedIn">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="https://instagram.com/alwaystejaa" target="_blank" class="social-link"
+                        <a href="https://instagram.com/alwaystejaa" target="_blank" class="social-link magnetic"
                             aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="https://www.facebook.com/tej44" target="_blank" class="social-link"
+                        <a href="https://www.facebook.com/tej44" target="_blank" class="social-link magnetic"
                             aria-label="Facebook">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="https://twitter.com/alwaystejaa" target="_blank" class="social-link"
+                        <a href="https://twitter.com/alwaystejaa" target="_blank" class="social-link magnetic"
                             aria-label="Twitter">
                             <i class="fab fa-x-twitter"></i>
                         </a>
@@ -579,7 +606,7 @@
                             <textarea id="form-message" name="message" rows="5"
                                 placeholder="Tell me about your project..." required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-full" id="contact-submit">
+                        <button type="submit" class="btn btn-primary btn-full magnetic" id="contact-submit">
                             <span>Send Message</span>
                             <i class="fas fa-paper-plane"></i>
                         </button>
@@ -598,9 +625,42 @@
                 </div>
                 <p class="footer-text">Designed & Built by <strong>Teja Nutakki</strong></p>
                 <p class="footer-copyright">&copy; <span id="footer-year"></span> All rights reserved.</p>
+                <p class="footer-easter-egg">Press <kbd>`</kbd> for a surprise 😉</p>
             </div>
         </div>
     </footer>
+
+    <!-- Hidden Terminal Easter Egg -->
+    <div class="terminal-overlay" id="terminal-overlay">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+                <span class="terminal-title-bar">teja@portfolio ~ Terminal</span>
+                <button class="terminal-close" id="terminal-close">&times;</button>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+                <div class="terminal-welcome">
+                    <pre class="ascii-art">
+ _____     _        _   _       _        _    _    _ 
+|_   _|__ (_) __ _ | \ | |_   _| |_ __ _| | _| | _(_)
+  | |/ _ \| |/ _` ||  \| | | | | __/ _` | |/ / |/ / |
+  | |  __/| | (_| || |\  | |_| | || (_| |   <|   <| |
+  |_|\___|/ |\__,_||_| \_|\__,_|\__\__,_|_|\_\_|\_\_|
+         |__/                                          
+                    </pre>
+                    <p>Welcome to Teja's terminal! Type <span class="cmd-highlight">help</span> for available commands.
+                    </p>
+                </div>
+            </div>
+            <div class="terminal-input-line">
+                <span class="terminal-prompt">teja@portfolio ~ $</span>
+                <input type="text" class="terminal-input" id="terminal-input" autocomplete="off" spellcheck="false"
+                    autofocus>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

@@ -315,18 +315,39 @@
   // ---- Contact Form ----
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = document.getElementById('contact-submit');
       const originalHTML = btn.innerHTML;
 
-      btn.innerHTML = '<span>Message Sent!</span> <i class="fas fa-check"></i>';
-      btn.style.background = 'linear-gradient(135deg, #06ffa5, #00d4ff)';
+      // Show loading state
+      btn.innerHTML = '<span>Sending...</span> <i class="fas fa-spinner fa-spin"></i>';
+      btn.disabled = true;
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          btn.innerHTML = '<span>Message Sent!</span> <i class="fas fa-check"></i>';
+          btn.style.background = 'linear-gradient(135deg, #06ffa5, #00d4ff)';
+          contactForm.reset();
+        } else {
+          btn.innerHTML = '<span>Failed to send</span> <i class="fas fa-times"></i>';
+          btn.style.background = 'linear-gradient(135deg, #ff4444, #cc0000)';
+        }
+      } catch (error) {
+        btn.innerHTML = '<span>Failed to send</span> <i class="fas fa-times"></i>';
+        btn.style.background = 'linear-gradient(135deg, #ff4444, #cc0000)';
+      }
 
       setTimeout(() => {
         btn.innerHTML = originalHTML;
         btn.style.background = '';
-        contactForm.reset();
+        btn.disabled = false;
       }, 3000);
     });
   }
